@@ -1,15 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ls.c                                            :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpan <tpan@student.42.us.org>              +#+  +:+       +#+        */
+/*   By: tpan <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/26 16:00:15 by tpan              #+#    #+#             */
-/*   Updated: 2017/03/28 18:28:59 by tpan             ###   ########.fr       */
+/*   Created: 2016/11/12 17:12:58 by tpan              #+#    #+#             */
+/*   Updated: 2016/11/14 15:42:57 by tpan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_ls.h"
+#include "libft.h"
 
+char	*ft_strrchr(const char *s, int c)
+{
+	char		ch;
+	const char	*sc = NULL;
 
+	ch = c;
+	while (*s != '\0')
+	{
+		if (*s == ch)
+			sc = s;
+		s++;
+	}
+	if (*s == '\0' && c == '\0')
+		sc = s;
+	return ((char *)sc);
+}

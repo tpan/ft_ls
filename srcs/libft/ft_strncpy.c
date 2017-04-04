@@ -1,15 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ls.c                                            :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpan <tpan@student.42.us.org>              +#+  +:+       +#+        */
+/*   By: tpan <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/26 16:00:15 by tpan              #+#    #+#             */
-/*   Updated: 2017/03/28 18:28:59 by tpan             ###   ########.fr       */
+/*   Created: 2016/08/16 20:18:23 by tpan              #+#    #+#             */
+/*   Updated: 2016/11/12 14:00:57 by tpan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_ls.h"
+char	*ft_strncpy(char *dest, const char *src, unsigned int n)
+{
+	unsigned	int i;
 
-
+	i = 0;
+	while (i < n && src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return (dest);
+}

@@ -1,15 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ls.c                                            :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpan <tpan@student.42.us.org>              +#+  +:+       +#+        */
+/*   By: tpan <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/26 16:00:15 by tpan              #+#    #+#             */
-/*   Updated: 2017/03/28 18:28:59 by tpan             ###   ########.fr       */
+/*   Created: 2016/11/03 17:48:20 by tpan              #+#    #+#             */
+/*   Updated: 2016/11/06 13:23:32 by tpan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_ls.h"
+#include "libft.h"
 
+void	*ft_memcpy(void *dst, const void *src, size_t n)
+{
+	unsigned long	i;
+	char			*d;
+	const char		*s;
 
+	i = 0;
+	d = dst;
+	s = src;
+	while (n > 0)
+	{
+		d[i] = s[i];
+		n--;
+		i++;
+	}
+	return (dst);
+}

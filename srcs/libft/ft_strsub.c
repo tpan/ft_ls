@@ -1,15 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ls.c                                            :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpan <tpan@student.42.us.org>              +#+  +:+       +#+        */
+/*   By: tpan <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/26 16:00:15 by tpan              #+#    #+#             */
-/*   Updated: 2017/03/28 18:28:59 by tpan             ###   ########.fr       */
+/*   Created: 2016/11/12 13:33:19 by tpan              #+#    #+#             */
+/*   Updated: 2016/11/17 10:36:19 by tpan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_ls.h"
+#include "libft.h"
 
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
+{
+	char *fresh;
 
+	if (!s)
+		return (NULL);
+	if (!(fresh = ft_strnew(len)))
+		return (NULL);
+	ft_strncpy(fresh, s + start, len);
+	return (fresh);
+}

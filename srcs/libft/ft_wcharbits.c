@@ -1,15 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ls.c                                            :+:      :+:    :+:   */
+/*   ft_wcharbits.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tpan <tpan@student.42.us.org>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/26 16:00:15 by tpan              #+#    #+#             */
-/*   Updated: 2017/03/28 18:28:59 by tpan             ###   ########.fr       */
+/*   Created: 2017/03/12 15:24:15 by tpan              #+#    #+#             */
+/*   Updated: 2017/03/20 20:00:58 by tpan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_ls.h"
+#include "libft.h"
 
+/*
+** Count number of bits needed to represent a unicode code point.
+*/
 
+size_t		ft_wcharbits(wchar_t c)
+{
+	size_t		i;
+
+	i = 0;
+	while (c > 0)
+	{
+		c = c >> 1;
+		i++;
+	}
+	return (i);
+}

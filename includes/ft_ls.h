@@ -6,7 +6,7 @@
 /*   By: tpan <tpan@student.42.us.org>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/26 19:04:53 by tpan              #+#    #+#             */
-/*   Updated: 2017/03/26 20:13:00 by tpan             ###   ########.fr       */
+/*   Updated: 2017/03/29 12:17:13 by tpan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@
 ** <uuid/uuid.h>		getpwuid(), getgrgid()
 ** <grp.h>				getgrgid()
 */
-
 
 #ifndef FT_LS_H
 # define FT_LS_H
