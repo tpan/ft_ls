@@ -14,8 +14,6 @@
 # define FT_PRINTF_H
 
 # include "libft.h"
-# include <stdarg.h>
-# include <wchar.h>
 
 # define INVALID	1
 # define VALID	0
