@@ -6,7 +6,7 @@
 /*   By: tpan <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/31 18:59:29 by tpan              #+#    #+#             */
-/*   Updated: 2017/03/14 14:06:59 by tpan             ###   ########.fr       */
+/*   Updated: 2017/04/09 16:29:40 by tpan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,8 +112,10 @@ size_t				ft_utf8charsize(wchar_t c);
 t_utf8				*ft_utf8strencode(const wchar_t *wstr);
 t_utf8				*ft_utf8strnencode(const wchar_t *wstr, size_t n);
 void				*ft_wchar_memset(void *b, wchar_t c, size_t len);
-size_t				ft_wcharsize_utf8(wchar_t c);
+size_t				ft_wcharsize_utf8(wchar_t c)
 wchar_t				*ft_wstrcpy(wchar_t *dst, wchar_t const *src);
 wchar_t				*ft_wstrdup(wchar_t *str);
+void				ft_lst_free(t_list *content, t_list content_size);
+void				ft_lst_append(t_list **alst, t_list *new));
 
 #endif
