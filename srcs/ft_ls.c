@@ -6,7 +6,7 @@
 /*   By: tpan <tpan@student.42.us.org>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/26 16:00:15 by tpan              #+#    #+#             */
-/*   Updated: 2017/04/09 16:17:24 by tpan             ###   ########.fr       */
+/*   Updated: 2017/04/09 22:33:40 by tpan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,4 +65,17 @@ static t_list		*populate_valid_args(int ac, char **argv, int *valid_args)
 	return (file_list);
 }
 
+int			main(int argc, char **argv)
+{
+	t_opt		*opts;
+	t_list		*file_list;
+	int			list_length;
 
+	opts = read_options(argc, argv);
+	file_list = init_list_from_args(argc, argv, opts);
+	list_length = ft_lst_len(file_list);
+	process_arguements(file_list, opts, list_length);
+	ft_lstdel(&file_list, &ft_lst_free);
+	free(opts);
+	return (0);
+}
