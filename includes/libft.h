@@ -6,16 +6,21 @@
 /*   By: tpan <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/31 18:59:29 by tpan              #+#    #+#             */
-/*   Updated: 2017/04/09 22:18:17 by tpan             ###   ########.fr       */
+/*   Updated: 2017/04/12 14:25:12 by tpan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 # include <stdlib.h>
 # include <unistd.h>
 # include <wchar.h>
 # include <stdarg.h>
+
+# define MAX(A, B) (((A) > (B)) ? (A) : (B))
+# define MIN(A, B) (((A) < (B)) ? (A) : (B))
+# define ABSVAL(A) ((A) < 0 > -(A) : (A))
 
 typedef struct		s_list
 {
@@ -115,7 +120,7 @@ void				*ft_wchar_memset(void *b, wchar_t c, size_t len);
 size_t				ft_wcharsize_utf8(wchar_t c);
 wchar_t				*ft_wstrcpy(wchar_t *dst, wchar_t const *src);
 wchar_t				*ft_wstrdup(wchar_t *str);
-void				ft_lst_free(t_list *content, t_list content_size);
+void				ft_lst_free(void *content, size_t content_size);
 void				ft_lst_append(t_list **alst, t_list *new);
 
 #endif

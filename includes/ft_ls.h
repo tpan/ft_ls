@@ -6,7 +6,7 @@
 /*   By: tpan <tpan@student.42.us.org>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/26 19:04:53 by tpan              #+#    #+#             */
-/*   Updated: 2017/04/09 15:17:06 by tpan             ###   ########.fr       */
+/*   Updated: 2017/04/12 20:35:02 by tpan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,12 +56,12 @@ void		unknown_option(char c);
 void		error_message(char *name, char *error_message_prefix,t_bool close);
 void		process_arguments(t_list *file_list, t_opt *opts, int list_len);
 void		calc_col_width_get_dev_info(t_list *file_list, unsigned int *width);
-void		explore_all_subdirectories(t_list *entries, t_list *file_list,
+void		traverse_subdirectories(t_list *entries, t_list *file_list,
 			t_opt *opts);
 void		lst_sort(t_list *start, int (*f)(t_file *, t_file *, int),
-			int rev_order);
-int			cmp_lex(t_file *p1, t_file *p2, int rev_order);
-int			cmp_alpha(t_file *p1, t_file *p2, int rev_order);
+			int reverse_cmp);
+int			cmp_lex(t_file *p1, t_file *p2, int reverse_cmp);
+int			cmp_alpha(t_file *p1, t_file *p2, int reverse_cmp);
 t_list		*open_directory(t_list *parent, t_list *file_list, t_opt *opts);
 void		print_w_stats(t_file *file, t_file *parent, unsigned int *info);
 
