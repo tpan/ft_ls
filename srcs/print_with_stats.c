@@ -6,7 +6,7 @@
 /*   By: tpan <tpan@student.42.us.org>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/12 20:43:38 by tpan              #+#    #+#             */
-/*   Updated: 2017/04/12 22:35:49 by tpan             ###   ########.fr       */
+/*   Updated: 2017/04/12 23:48:45 by tpan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ static void		print_filetype(mode_t mode)
 		ft_putchar('f');
 	else if ((mode & S_IFMT) == S_IFDIR)
 		ft_putchar('d');
-
+	print_permissions(mode);
 }
 
 static void		print_name_or_link(t_file *file, t_file *parent, mode_t mode)

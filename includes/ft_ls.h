@@ -6,7 +6,7 @@
 /*   By: tpan <tpan@student.42.us.org>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/26 19:04:53 by tpan              #+#    #+#             */
-/*   Updated: 2017/04/12 20:35:02 by tpan             ###   ########.fr       */
+/*   Updated: 2017/04/12 23:06:45 by tpan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,6 @@ void		lst_sort(t_list *start, int (*f)(t_file *, t_file *, int),
 int			cmp_lex(t_file *p1, t_file *p2, int reverse_cmp);
 int			cmp_alpha(t_file *p1, t_file *p2, int reverse_cmp);
 t_list		*open_directory(t_list *parent, t_list *file_list, t_opt *opts);
-void		print_w_stats(t_file *file, t_file *parent, unsigned int *info);
+void		print_with_stats(t_file *file, t_file *parent, unsigned int *info);
 
 #endif

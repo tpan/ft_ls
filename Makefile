@@ -6,14 +6,14 @@
 #    By: tpan <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/10/31 18:58:43 by tpan              #+#    #+#              #
-#    Updated: 2017/04/12 22:58:59 by tpan             ###   ########.fr        #
+#    Updated: 2017/04/12 23:33:17 by tpan             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= ft_ls
 
 CC		= gcc
-CFLAGS 	= -Wall -Wextra -Werror -g
+FLAGS 	= -Wall -Wextra -Werror
 
 FT_LS_SRC_DIR = ./srcs/
 LIB_SRC_DIR = ./srcs/libft
@@ -135,14 +135,18 @@ FT_PRINTF_COMPILED =	read_flags.o \
 						fix_sign.o \
 
 FT_LS_COMPILED =		ft_ls.o \
+						cmp_sort.o \
+						ls_helpers.o \
+						open_dir.o \
+						parse_and_print.o \
+						print_with_stats.o \
 
 COMPILED =		$(LIBFT_COMPILED) $(FT_PRINTF_COMPILED) $(FT_LS_COMPILED)
 
 all: $(NAME)
 
 $(NAME): $(COMPILED) 
-	@ar rc $(NAME) $(COMPILED)
-	@ranlib $(NAME) 
+	@$(CC) $(FLAGS) -o $(NAME) $(COMPILED)
 	@echo "Made" $(NAME)
 
 $(LIBFT_COMPILED): %.o: $(LIB_SRC_DIR)/%.c

@@ -6,7 +6,7 @@
 /*   By: tpan <tpan@student.42.us.org>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/12 09:15:40 by tpan              #+#    #+#             */
-/*   Updated: 2017/04/12 14:18:33 by tpan             ###   ########.fr       */
+/*   Updated: 2017/04/12 23:08:06 by tpan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ static void		print_dir_contents(t_list *parent, t_list *file_list,
 	while (entries)
 	{
 		if (opts->l)
-			print_w_stats((t_file *)entries->content,
+			print_with_stats((t_file *)entries->content,
 										((t_file *)file_list->content), info);
 		else
 			ft_printf("%s\n", ((t_file *)entries->content)->name);
@@ -108,7 +108,7 @@ void		process_arguments(t_list *file_list, t_opt *opts, int list_len)
 		else
 		{
 			if (opts->l)
-				print_w_stats((t_file *)file_list->content, NULL, info);
+				print_with_stats((t_file *)file_list->content, NULL, info);
 			else
 				ft_printf("%s\n", ((t_file *)file_list->content)->name);
 		}

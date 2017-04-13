@@ -6,7 +6,7 @@
 /*   By: tpan <tpan@student.42.us.org>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/09 22:37:33 by tpan              #+#    #+#             */
-/*   Updated: 2017/04/11 16:16:41 by tpan             ###   ########.fr       */
+/*   Updated: 2017/04/12 23:07:21 by tpan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ void		calc_col_width_get_dev_info(t_list *file_list, unsigned int *w)
 ** report an error and exit the program cleanly.
 */
 
-void		unknown_option_error(char c)
+void		unknown_option(char c)
 {
 	ft_putstr_fd("ft_ls: illegal option --", 2);
 	ft_putchar_fd(c, 2);
