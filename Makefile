@@ -6,7 +6,7 @@
 #    By: tpan <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/10/31 18:58:43 by tpan              #+#    #+#              #
-#    Updated: 2017/04/09 16:30:10 by tpan             ###   ########.fr        #
+#    Updated: 2017/04/12 22:58:59 by tpan             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -110,6 +110,7 @@ LIBFT_COMPILED 	=	ft_strlen.o \
 					ft_itoa_base_intmax.o \
 					ft_lst_append.o \
 					ft_lst_free.o \
+					ft_lst_len.o \
 
 FT_PRINTF_COMPILED =	read_flags.o \
 						read_precision.o \
