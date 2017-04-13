@@ -98,7 +98,7 @@ static void		print_time(time_t mod_time)
 
 	ct = time(NULL);
 	if ((str = ctime(&mod_time)) == NULL)
-		return;
+		return ;
 	start = str + 4;
 	end = str + 10;
 	*end = 0;

@@ -45,7 +45,7 @@ static t_list	*modify_folder_name(t_list *parent, t_list *file_list)
 }
 
 /*
-** Reads and saves a directories contents to a list of files with stats, Files 
+** Reads and saves a directories contents to a list of files with stats, Files
 ** that begin with '.' are ignored unless the -a option is set.
 */
 
@@ -58,7 +58,7 @@ static t_list	*read_directory(DIR *directory, t_list *file_list, t_opt *opts)
 	entries = NULL;
 	current = (t_file *)ft_memalloc(sizeof(t_file));
 	file = readdir(directory);
-	while(file)
+	while (file)
 	{
 		if (opts->a || file->d_name[0] != '.')
 		{

@@ -12,7 +12,9 @@
 
 #include "../includes/ft_ls.h"
 
-/* Returns (1) if lstat finds a valid and accesible file. Else it will print an**error message and return (0).
+/*
+** Returns (1) if lstat finds a valid and accesible file. Else it will print an
+** error message and return (0).
 */
 
 t_bool		file_accessible(char *filename)
@@ -29,12 +31,12 @@ t_bool		file_accessible(char *filename)
 }
 
 /*
- ** Compare the length of the column and save the largest so the width can be
- ** formatted with printf. Tests S_IFBLK and S_IFCHR (block special and
- ** char special) which indicates that a file is a device. Char devices include
- ** SErial ports, parallel ports and sound cards while block devices include
- ** Hard disks, usb cameras etc.
- */
+** Compare the length of the column and save the largest so the width can be
+** formatted with printf. Tests S_IFBLK and S_IFCHR (block special and
+** char special) which indicates that a file is a device. Char devices include
+** Serial ports, parallel ports and sound cards while block devices include
+** Hard disks, usb cameras etc.
+*/
 
 void		calc_col_width_get_dev_info(t_list *file_list, unsigned int *w)
 {
@@ -76,7 +78,7 @@ void		unknown_option(char c)
 	exit(EXIT_FAILURE);
 }
 
-void	error_message(char *filename, char *error_msg_prefix, t_bool close)
+void		error_message(char *filename, char *error_msg_prefix, t_bool close)
 {
 	ft_putstr_fd(filename, 2);
 	perror(error_msg_prefix);

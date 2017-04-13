@@ -51,18 +51,23 @@ typedef struct		s_file
 	struct stat		stats;
 }					t_file;
 
-t_bool		file_accessible(char *filename);
-void		unknown_option(char c);
-void		error_message(char *name, char *error_message_prefix,t_bool close);
-void		process_arguments(t_list *file_list, t_opt *opts, int list_len);
-void		calc_col_width_get_dev_info(t_list *file_list, unsigned int *width);
-void		traverse_subdirectories(t_list *entries, t_list *file_list,
-			t_opt *opts);
-void		lst_sort(t_list *start, int (*f)(t_file *, t_file *, int),
-			int reverse_cmp);
-int			cmp_lex(t_file *p1, t_file *p2, int reverse_cmp);
-int			cmp_alpha(t_file *p1, t_file *p2, int reverse_cmp);
-t_list		*open_directory(t_list *parent, t_list *file_list, t_opt *opts);
-void		print_with_stats(t_file *file, t_file *parent, unsigned int *info);
+t_bool				file_accessible(char *filename);
+void				unknown_option(char c);
+void				error_message(char *name, char *error_message_prefix,
+					t_bool close);
+void				process_arguments(t_list *file_list, t_opt *opts,
+					int list_len);
+void				calc_col_width_get_dev_info(t_list *file_list,
+					unsigned int *width);
+void				traverse_subdirectories(t_list *entries, t_list *file_list,
+					t_opt *opts);
+void				lst_sort(t_list *start, int (*f)(t_file *, t_file *, int),
+					int reverse_cmp);
+int					cmp_lex(t_file *p1, t_file *p2, int reverse_cmp);
+int					cmp_alpha(t_file *p1, t_file *p2, int reverse_cmp);
+t_list				*open_directory(t_list *parent, t_list *file_list,
+					t_opt *opts);
+void				print_with_stats(t_file *file, t_file *parent,
+					unsigned int *info);
 
 #endif

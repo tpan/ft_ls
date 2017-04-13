@@ -69,7 +69,7 @@ static void		lst_swap_contents(t_list *p1, t_list *p2)
 ** the result of cmp_lex or cmp_alpha.
 */
 
-void		lst_sort(t_list *start, int (*f)(t_file *, t_file *, int),
+void			lst_sort(t_list *start, int (*f)(t_file *, t_file *, int),
 															int reverse_cmp)
 {
 	int			swapped;

@@ -67,7 +67,7 @@ static void		print_dir_contents(t_list *parent, t_list *file_list,
 		traverse_subdirectories(entries, file_list, opts);
 }
 
-void		traverse_subdirectories(t_list *entries, t_list *file_list,
+void			traverse_subdirectories(t_list *entries, t_list *file_list,
 											t_opt *opts)
 {
 	while (entries)
@@ -88,13 +88,13 @@ static void		process_dir_contents(t_list *file_list, t_opt *opts,
 	{
 		if (prev)
 			ft_printf("\n");
-		if (list_len >1)
+		if (list_len > 1)
 			ft_printf("%s:\n", ((t_file *)file_list->content)->name);
 	}
 	print_dir_contents(NULL, file_list, opts);
 }
 
-void		process_arguments(t_list *file_list, t_opt *opts, int list_len)
+void			process_arguments(t_list *file_list, t_opt *opts, int list_len)
 {
 	t_list			*prev;
 	unsigned int	info[7];

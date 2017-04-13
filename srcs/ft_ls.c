@@ -17,6 +17,7 @@ static t_opt		*read_options(int ac, char **argv)
 	int		i;
 	int		j;
 	t_opt	*opts;
+
 	opts = ft_memalloc(sizeof(t_opt));
 	i = 0;
 	while (++i < ac)
@@ -52,7 +53,7 @@ static t_list		*populate_valid_args(int ac, char **argv, int *valid_args)
 			ft_printf("ft_ls: %s: %s", argv[i], strerror(errno));
 			(*valid_args)++;
 		}
-		else if (ft_strchr(&argv[i][0] , '-') == 0 && !ft_strequ(argv[i], 
+		else if (ft_strchr(&argv[i][0], '-') == 0 && !ft_strequ(argv[i],
 		"./ft_ls"))
 		{
 			tmp->name = ft_strdup(argv[i]);
@@ -93,7 +94,7 @@ static	t_list		*init_list_from_args(int argc, char **argv, t_opt *opts)
 	return (file_list);
 }
 
-int			main(int argc, char **argv)
+int					main(int argc, char **argv)
 {
 	t_opt		*opts;
 	t_list		*file_list;
